@@ -131,7 +131,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="inline-flex items-center gap-2 font-body text-sm font-medium text-ink hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Live demo
+                  {project.demoLabel ?? "Live demo"}
                 </a>
               )}
             </div>

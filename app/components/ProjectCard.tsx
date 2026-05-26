@@ -66,7 +66,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
             onClick={(e) => e.stopPropagation()}
           >
             <ExternalLink className="w-4 h-4" aria-hidden />
-            Demo
+            {project.demoLabel ?? "Live demo"}
           </a>
         )}
         <button

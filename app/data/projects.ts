@@ -13,6 +13,7 @@ export type Project = {
   stack: string[];
   github: string;
   demo?: string;
+  demoLabel?: string;
 };
 
 export const projects: Project[] = [
@@ -49,6 +50,7 @@ export const projects: Project[] = [
       "LangSmith",
     ],
     github: "https://github.com/arushijha03/SkillsRadar",
+    demo: "https://skillsradar-hfjwf7ewehabzwyj2sucd3.streamlit.app/",
   },
   {
     id: "insightlens",
@@ -81,6 +83,7 @@ export const projects: Project[] = [
       "Python",
     ],
     github: "https://github.com/arushijha03/InsightLens",
+    demo: "https://euec5wxonk9zyfm4w2wzht.streamlit.app/",
   },
   {
     id: "pigmint",
@@ -137,6 +140,8 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "Scikit-learn", "XGBoost", "PCA", "KMeans", "ARM"],
     github: "https://github.com/arushijha03/reelMetrics",
+    demo: "https://sites.google.com/view/reel-metrics/introduction",
+    demoLabel: "Website",
   },
   {
     id: "cloud9",
