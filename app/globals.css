@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-pastel-lavender: #E8D5F5;
+  --color-pastel-lavender-deep: #C9A6E3;
+  --color-pastel-mint: #D5F5E3;
+  --color-pastel-mint-deep: #A3E4BF;
+  --color-pastel-peach: #FDEBD0;
+  --color-pastel-peach-deep: #F5C89A;
+  --color-pastel-sky: #D6EAF8;
+  --color-pastel-sky-deep: #A9CCE3;
+  --color-pastel-rose: #FADBD8;
+  --color-pastel-rose-deep: #F1948A;
+  --color-pastel-lemon: #FCF3CF;
+  --color-pastel-lemon-deep: #F9E79F;
+  --color-pastel-sage: #D5E8D4;
+  --color-pastel-sage-deep: #A9D5A7;
+  --color-pastel-periwinkle: #D5D8F5;
+  --color-pastel-periwinkle-deep: #A9AEE3;
+  --color-pastel-coral: #F5D5E0;
+  --color-pastel-coral-deep: #E8A6BF;
+
+  --color-surface-light: #FEFCF9;
+  --color-surface-dark: #1a1a2e;
+  --color-card-light: #FFFFFF;
+  --color-card-dark: #232340;
+  --color-text-primary-light: #2D2D3A;
+  --color-text-primary-dark: #F0EFF4;
+  --color-text-secondary-light: #6B6B80;
+  --color-text-secondary-dark: #A0A0B8;
+  --color-border-light: #E8E8F0;
+  --color-border-dark: #3A3A55;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Portfolio editorial palette */
+  --color-ink: #111111;
+  --color-paper: #fafaf8;
+  --color-surface: #f0eee8;
+  --color-accent: #e8a020;
+  --color-muted: #6b6b6b;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface-light);
+  color: var(--color-text-primary-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-primary-dark);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4d4;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a65;
+}
+
+/* Glossary term hover tooltip */
+.glossary-term:hover .glossary-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* KaTeX overrides for dark mode */
+.dark .katex {
+  color: var(--color-text-primary-dark);
+}
+
+/* Portfolio typography utilities */
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+.font-body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
