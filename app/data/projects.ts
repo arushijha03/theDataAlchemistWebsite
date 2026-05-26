@@ -14,6 +14,7 @@ export type Project = {
   github: string;
   demo?: string;
   demoLabel?: string;
+  extraLinks?: { label: string; href: string }[];
 };
 
 export const projects: Project[] = [
@@ -51,6 +52,13 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/arushijha03/SkillsRadar",
     demo: "https://skillsradar-hfjwf7ewehabzwyj2sucd3.streamlit.app/",
+    demoLabel: "Live app",
+    extraLinks: [
+      {
+        label: "Demo video",
+        href: "https://www.loom.com/share/9ed0533b7ebc4dbbbfc830597f12d9dc",
+      },
+    ],
   },
   {
     id: "insightlens",
@@ -84,6 +92,13 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/arushijha03/InsightLens",
     demo: "https://euec5wxonk9zyfm4w2wzht.streamlit.app/",
+    demoLabel: "Live app",
+    extraLinks: [
+      {
+        label: "Demo video",
+        href: "https://www.loom.com/share/5b18dec2235a4f0fa4a551f9eb3f9cb4",
+      },
+    ],
   },
   {
     id: "pigmint",
@@ -116,6 +131,8 @@ export const projects: Project[] = [
       "TypeScript",
     ],
     github: "https://github.com/arushijha03/pigmint_finance",
+    demo: "https://drive.google.com/file/d/1xqEEBaUzGwO_j6xsHogdX3r4XgxRpLP-/view?usp=sharing",
+    demoLabel: "Demo video",
   },
   {
     id: "reelmetrics",

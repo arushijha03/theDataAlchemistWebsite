@@ -113,7 +113,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </div>
 
-            <div className="flex gap-4 px-6 py-4 border-t border-ink/10 shrink-0 bg-surface/40">
+            <div className="flex flex-wrap gap-4 px-6 py-4 border-t border-ink/10 shrink-0 bg-surface/40">
               <a
                 href={project.github}
                 target="_blank"
@@ -134,6 +134,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.demoLabel ?? "Live demo"}
                 </a>
               )}
+              {project.extraLinks?.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-body text-sm font-medium text-ink hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  {link.label}
+                </a>
+              ))}
             </div>
           </motion.div>
         </>

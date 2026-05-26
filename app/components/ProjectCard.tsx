@@ -69,6 +69,19 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
             {project.demoLabel ?? "Live demo"}
           </a>
         )}
+        {project.extraLinks?.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-body text-sm text-ink hover:text-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ExternalLink className="w-4 h-4" aria-hidden />
+            {link.label}
+          </a>
+        ))}
         <button
           type="button"
           onClick={() => onSelect(project)}
